@@ -7,7 +7,7 @@ export default function Navbar() {
   useEffect(() => {
     setLoggedIn(localStorage.getItem("loggedIn"));
   }, []);
-
+ 
   return (
     <div className="navbar">
       <Link to="/">Home</Link>
@@ -15,6 +15,7 @@ export default function Navbar() {
         <>
           <Link to="/upload">Upload</Link>
           <Link to="/profile">Profile</Link>
+          <Link to="/login" onClick={() => localStorage.clear()} >Logout</Link>
         </>
       ) : (
         <>
